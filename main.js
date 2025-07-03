@@ -21,7 +21,6 @@ each result to the console.
     result to a variable named lowercaseString.
     2. Convert the string to all uppercase letters using toUpperCase and assign the
     result to a variable named uppercaseString.
-    1
     3. Remove the extra spaces from the beginning and end of the string using
     trim and assign the result to a variable named trimmedString.
     4. Replace the word "JavaScript" with "coding" using replace and assign
@@ -30,11 +29,41 @@ each result to the console.
 3. Breaking Apart
     1. Split the string into an array of words using split with a space (" ") as the
     delimiter and assign the result to a variable named wordsArray.
+
 4. Retrieving
     1. Retrieve the first character of the trimmed string using charAt and assign
     the result to a variable named firstCharacter.
     2. Extract the word "Bootcamp" from the string using slice and assign the
     result to a variable named extractedBootcamp. */
 
-    let inputString = " Welcome to the Coding Bootcamp! Learn JavaScript
-today.
+let inputString = " Welcome to the Coding Bootcamp! Learn JavaScript today. ";
+
+/* Section ONE */
+let hasJavaScript = inputString.includes("JavaScript");
+console.log(hasJavaScript);
+let codingPosition = inputString.indexOf("Coding");
+console.log(codingPosition);
+let startsWithWelcome = inputString.startsWith("Welcome");
+console.log(startsWithWelcome);
+let endsWithToday = inputString.endsWith("today.");
+console.log(endsWithToday);
+
+/* Section TWO */
+let lowercaseString = inputString.toLowerCase();
+console.log(lowercaseString);
+let uppercaseString = inputString.toUpperCase();
+console.log(uppercaseString);
+let trimmedString = inputString.trim();
+console.log(trimmedString);
+let replacedString = inputString.replace("JavaScript", "coding");
+console.log(replacedString);
+
+/* Section Three */
+let wordsArray = inputString.split(" ");
+console.log(wordsArray);
+
+/* Section Four */
+let firstCharacter = trimmedString.charAt(0);
+console.log(firstCharacter);
+let extractedBootcamp = trimmedString.slice(22, 30);
+console.log(extractedBootcamp);
